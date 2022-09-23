@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-color: #06021e;
+}
+
+.field {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.likeButton {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  background: none;
+  outline: none;
+  background-image: url("https://raw.githubusercontent.com/livebloggerofficial/Twitter-Like-Animation/main/images/heart.png");
+  background-position: left;
+  border: none;
+  cursor: pointer;
+}
+
+.likeButton .btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(249, 24, 128, 0);
+  z-index: -1;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.likeButton:hover .btn {
+  background-color: rgba(249, 24, 128, 0.15);
+}
+
+.likeButton.liked {
+  animation: pop 0.8s steps(28) forwards;
+}
+
+@keyframes pop {
+  to {
+    background-position: right;
+  }
+}
